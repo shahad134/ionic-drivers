@@ -17,19 +17,25 @@
     <ion-row class="row1">
       <ion-col>
         <ion-button
-          href="/driver/orders"
+          href="/admins/request"
           class="ion-button"
           expand="block"
           color="white"
-          >الطلبات</ion-button
+          >Request</ion-button
         >
-        <!-- <ion-button  href="" class="ion-button2"   expand="block" color="white" ></ion-button> -->
+        <ion-button
+          href="/admins/delivered"
+          class="ion-button3"
+          expand="block"
+          color="white"
+          >Previous Trips</ion-button
+        >
         <ion-button
           (click)="logout()"
           class="ion-button3"
           expand="block"
           color="white"
-          >تسجيل الخروج</ion-button
+          >Logout</ion-button
         >
       </ion-col>
     </ion-row>

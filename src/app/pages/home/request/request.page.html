@@ -1,13 +1,28 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>طلباتي</ion-title>
+<!-- <ion-header  class="ion-no-border"> 
+  <ion-toolbar> -->
+    <!-- <ion-title>طلباتي</ion-title>
     <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons> -->
+    <!-- <ion-buttons slot="start">
+      
       <ion-back-button defaultHref="home"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
+  <ion-toolbar>
+    <div style="height: 40px"></div>
+    <div class="img-right" style="padding-bottom: 20px; text-align: center">
+      <img
+        class="img-right"
+        src="../../../../assets/tharwat1.png"
+        width="160mm"
+        height="80mm"
+      />
+    </div>
+  </ion-toolbar>
 </ion-header>
-<ion-content>
-  <ion-grid class="grid1">
+<ion-content> -->
+  <!-- <ion-grid class="grid1">
     <ion-row class="row1">
       <ion-col>
       </ion-col>
@@ -16,9 +31,14 @@
       <ion-col>
       </ion-col>
     </ion-row>
-  </ion-grid>
-
-    
+  </ion-grid> -->
+<!-- 
+  <ion-tabs> -->
+    <!-- Tab bar -->
+    <!-- <ion-tab-bar slot="top">
+      <ion-tab-button > الطلبات  </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
   <ion-list *ngFor ="let tag of donations_info">
     <ion-item *ngIf="tag"> 
 
@@ -75,7 +95,7 @@
       </ion-text>
     </ion-item>
   </ion-list>
-</ion-content>
+</ion-content> -->
 
   <!-- <ion-text *ngIf="tutorialShown1">
 
@@ -187,3 +207,33 @@
   </ion-text>
 </ion-content>
      -->
+     <ion-header class="ion-no-border">
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-button (click)="goBack()">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+      <ion-toolbar>
+        <div style="height: 40px"></div>
+        <div class="img-right" style="padding-bottom: 20px; text-align: center">
+          <img
+            class="img-right"
+            src="../../../../assets/tharwat1.png"
+            width="160mm"
+            height="80mm"
+          />
+        </div>
+      </ion-toolbar>
+    </ion-header>
+    
+    <ion-content>
+      <ion-tabs>
+        <!-- Tab bar -->
+        <ion-tab-bar slot="top" selectedTab="new">
+          <ion-tab-button tab="new"> الطلبات الجديدة </ion-tab-button>
+       
+        </ion-tab-bar>
+      </ion-tabs>
+    </ion-content>

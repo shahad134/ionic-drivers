@@ -30,9 +30,13 @@ const routes: Routes = [
     path: 'donation',
     loadChildren: () => import('./pages/custmer/donation/donation.module').then( m => m.DonationPageModule)
   },
+  // {
+  //   path: 'admine',
+  //   loadChildren: () => import('./pages/admine/admine.module').then( m => m.AdminPageModule)
+  // },
   {
-    path: 'admin',
-    loadChildren: () => import('./pages/admin/admin.module').then( m => m.AdminPageModule)
+    path: 'admins',
+    loadChildren: () => import('./pages/admins/admin.module').then( m => m.AdminsPageModule)
   },
   {
     path: 'home',
@@ -58,12 +62,20 @@ const routes: Routes = [
   },
   {
     path: 'request',
-    loadChildren: () => import('./pages/custmer/request/request.module').then( m => m.RequestPageModule)
+    loadChildren: () => import('./pages/home/request/request.module').then( m => m.RequestPageModule)
   },
   {
     path: 'driver',
     loadChildren: () => import('./pages/driver/driver.module').then( m => m.DriverPageModule)
-  }
+  },
+  // {
+  //   path: 'new',
+  //   loadChildren: () => import('./pages/home/new/new.module').then( m => m.NewPageModule)
+  // },
+  // {
+  //   path: 'requests',
+  //   loadChildren: () => import('./pages/requests/requests.module').then( m => m.RequestsPageModule)
+  // }
 ];
 
 @NgModule({

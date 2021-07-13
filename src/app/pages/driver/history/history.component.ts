@@ -1,13 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { OrderDetailsComponent } from '../order-details/order-details.component';
-
 import { NavController } from '@ionic/angular';
 import{ HttpServiceService} from '../../../services/http-service.service';
-
 import { Driver } from 'src/app/models/driversModel';
 import { Connect_info } from 'src/app/models/connectinfo';
-
 import { AuthService } from 'src/app/services/auth.service';
 import { EnvService } from 'src/app/services/env.service';
 
@@ -40,7 +37,7 @@ export class HistoryComponent implements OnInit {
   }
 
   ionViewWillEnter() {
-    this.httpService.makeGet('auth/api_receive_orders').subscribe(
+    this.httpService.makeGet('auth/api_receive_orders_accept').subscribe(
       // user => {
       //   this.user = user;
       // },

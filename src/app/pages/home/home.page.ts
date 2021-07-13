@@ -17,20 +17,30 @@ export class HomePage  {
     private navCtrl: NavController,
     private alertService: AlertService
   ) { }
- 
-    logout() {
-      this.authService.logout().subscribe(
-        data => {
-          this.alertService.presentToast("تم تسجيل الخروج");        
-        },
-        error => {
-          console.log(error);
-        },
-        () => {
-          this.navCtrl.navigateRoot('/login');
-        }
-      );
-    }
+   
+  ngOnInit() {
+  }
+
+//     logout() {
+//       this.authService.logout().subscribe(
+//         data => {
+//           this.alertService.presentToast("تم تسجيل الخروج");        
+//         },
+//         error => {
+//           console.log(error);
+//         },
+//         () => {
+//           this.navCtrl.navigateRoot('/login');
+//         }
+//       );
+//     }
+// }
+logout = () => {
+  localStorage.removeItem("token");
+  localStorage.removeItem("is_admin");
+  this.navCtrl.navigateRoot("/login")
+}
+
 }
 
 

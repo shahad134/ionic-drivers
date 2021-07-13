@@ -114,7 +114,9 @@ export class InfoConnectPage implements OnInit {
     this.info_connect.street_name = this.addmore.get('street_name').value
     this.info_connect.house_number = this.addmore.get('house_number').value
     this.info_connect.nearest_landmark = this.addmore.get('nearest_landmark').value
+    //shahad
 
+    //info_connect.order_number
     let data = {
       info_connect:this.info_connect
     }

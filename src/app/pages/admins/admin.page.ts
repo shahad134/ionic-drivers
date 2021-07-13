@@ -4,6 +4,7 @@ import { AlertService } from 'src/app/services/alert.service';
 import { EnvService } from './../../services/env.service';
 import { CommonModule } from '@angular/common';
 import{ HttpServiceService} from './../../services/http-service.service';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-admin',
@@ -18,11 +19,12 @@ export class AdminPage implements OnInit {
   constructor(
     private alertService: AlertService,
     private env: EnvService,
-    private httpService :HttpServiceService
+    private httpService :HttpServiceService,
+    private navCtrl: NavController
   ) { }
 
   ngOnInit() {
-  } 
+  }
  //donation :any;
  
   ionViewWillEnter() {
@@ -37,15 +39,12 @@ export class AdminPage implements OnInit {
         if(this.donations_info[i] == "null"){
        this.donations_info[i] ={
             furniture:'',
-            clothes :'',
-            electrical_tools:'',
-            dishes:'',
-            baby_things:'',
+            clothes :''
        }
-    
+       
        JSON.stringify(donations_info[i])
 
-      
+        }}
           
           
           
@@ -55,7 +54,7 @@ export class AdminPage implements OnInit {
              // return(donations_info[i])
              //this.shahad.push(donations_info[i]);
               // this.clothes.push(donations_info[i].clothes)
-           } } 
+          //  } } 
             // donations_info=JSON.stringify(donations_info[i]);
           //console.log(donations_info);                      
           
@@ -88,5 +87,11 @@ export class AdminPage implements OnInit {
           
         })
           //  });
+    }
+
+    logout = () => {
+      localStorage.removeItem("token");
+      localStorage.removeItem("is_admin");
+      this.navCtrl.navigateRoot("/login")
     }
   }

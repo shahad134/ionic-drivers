@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AdminPageRoutingModule } from './admin-routing.module';
+import { AdminPageRoutingModule } from './admine-routing.module';
 
-import { AdminPage } from './admin.page';
+import { AdminPage } from './admine.page';
 
 @NgModule({
   imports: [

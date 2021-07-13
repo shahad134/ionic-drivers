@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-
+import { Routes, RouterModule } from '@angular/router'; 
 import { DriverPage } from './driver.page';
 import { HistoryComponent } from './history/history.component';
 import { NewComponent } from './new/new.component';
@@ -23,12 +22,12 @@ const routes: Routes = [
         path: 'new',
         component: NewComponent
       },
-      {
+      {  
         path: 'history',
         component: HistoryComponent
       },
     ]
-  },
+  }, 
   {
     path: "**",
     redirectTo: "/"

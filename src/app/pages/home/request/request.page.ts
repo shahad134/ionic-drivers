@@ -114,6 +114,7 @@ import { AuthService } from '../../../services/auth.service';
 import { User } from 'src/app/models/user';
 //Connect_info
 import { Connect_info } from 'src/app/models/connectinfo';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-request',
@@ -124,35 +125,39 @@ export class RequestPage implements OnInit {
 
     imports: [CommonModule]
 
-    connect_info:Connect_info ;
-    user: User;
-    connect_inlfo=[];
-    // donations_info=[]
-    donations_info:Donations_info[];
-    // =[{furniture:'',clothes:'',electrical_tools:'',dishes:'',baby_things:'',luxuries:'',accessories_and_mobiles:'',medical_devices:'',miscellaneous:''}]
-     ;  
+    // connect_info:Connect_info ;
+    // user: User;
+    // connect_inlfo=[];
+    // // donations_info=[]
+    // donations_info:Donations_info[];
+    // // =[{furniture:'',clothes:'',electrical_tools:'',dishes:'',baby_things:'',luxuries:'',accessories_and_mobiles:'',medical_devices:'',miscellaneous:''}]
+    //  ;  
     constructor(
       private alertService: AlertService,
       private env: EnvService,
       private authService: AuthService,
-      private httpService :HttpServiceService
+      private httpService :HttpServiceService,
+      private navCtrl: NavController,
+      
   ) { }
 
-  tutorialShown = false;
+  // tutorialShown = false;
   ngOnInit() {
   }
-
+  // goBack(){
+  //   this.navCtrl.navigateBack('/home');
+  // }
   ionViewWillEnter() {    
-    this.httpService.makeGet('auth/receive_donation').subscribe(
-      // user => {
-      //   this.user = user;
-      // },
-      donations_info => {
-       this.donations_info = donations_info
-       console.log(donations_info);
-        for(let i =0; i <= donations_info.length; i++){
-         console.log(donations_info[i]);}
-      })
+    // this.httpService.makeGet('auth/receive_donation').subscribe(
+    //   // user => {
+    //   //   this.user = user;
+    //   // },
+    //   donations_info => {
+    //    this.donations_info = donations_info
+    //    console.log(donations_info);
+    //     for(let i =0; i <= donations_info.length; i++){
+    //      console.log(donations_info[i]);}
+      // })
     //    this.put(this.donations_info.furniture,this.furniture)
     //    console.log(donations_info);
     //  for(let i =0; i <= donations_info.length; i++){

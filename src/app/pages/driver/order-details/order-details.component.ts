@@ -34,14 +34,14 @@ export class OrderDetailsComponent implements OnInit {
   submit() {
     console.log("Accept")
     // this.httpService.makeGet('auth/send_status').subscribe()
-    // this.status  = 'accept';
+    this.status  = 'accept';
     this.order_number =  '89485';
 
     let data = {
       order_number:this.order_number
     }
     console.log(data)
-    this.httpService.post('auth/update_status', data).subscribe(
+    this.httpService.makeGet('auth/update_status').subscribe(
       data => {
         this.alertService.presentToast("تم تحديث البيانات بنجاح");
       },
@@ -64,6 +64,6 @@ export class OrderDetailsComponent implements OnInit {
         console.log(connect_info);
       }
     )
-  }
+   }
 
 }
